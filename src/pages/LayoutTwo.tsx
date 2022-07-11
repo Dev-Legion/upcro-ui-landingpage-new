@@ -159,13 +159,14 @@ const LayoutTwo = (props: any) => {
               <Image src='img/sidebar_link_ic04.svg' alt="" />
               <span>Pools</span>
             </NavLink>
-            <NavLink
-              to='/faq'
-              className={splitLocation[1] === '' ? 'active' : ''}
+            <a
+              // to='/faq'
+              href="#"
+              // className={splitLocation[1] === '' ? 'active' : ''}
             >
               <Image src='img/sidebar_link_ic06.svg' alt="" />
-              <span>FAQ</span>
-            </NavLink>
+              <span>FAQ</span>&nbsp;<span style={{fontSize:"12px", height:"20px"}}>Coming Soon</span>
+            </a>
             {/* <NavLink
               to='/roadmap'
               className={splitLocation[1] === '' ? 'active' : ''}
