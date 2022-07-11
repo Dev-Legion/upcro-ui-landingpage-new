@@ -273,6 +273,7 @@ export default function StakeTabTwo() {
             <TabPanels>
                 <TabPanel className='stake_tab_panel01_prnt'>
                     <Box className='stake_tab_panel01'>
+                        <span className="apyText">{`${info?.apy}% APY`}</span>
                         <Box className='stake_inpt_box'>
                             <Box className='text_row'>
                                 <Text>Amount to deposit</Text>
@@ -341,6 +342,7 @@ export default function StakeTabTwo() {
                 </TabPanel>
                 <TabPanel className='stake_tab_panel01_prnt stake_tab_panel02_prnt'>
                     <Box className='stake_tab_panel01'>
+                        <span className="apyText">{`${info?.apy}% APY`}</span>
                         <Box className='stake_inpt_box'>
                             <Box className='text_row'>
                                 <Text>Amount to withdraw</Text>
@@ -412,10 +414,10 @@ export default function StakeTabTwo() {
             </TabPanels>
             </Tabs>
             <br/><br/>
-            <Stats>
-                <span>Staked</span><span>{loadingInfo ? <InfoLoader/> : info ? `${getDisplayBalance(info!.staked)} ${STAKING_TICKER}` : ""}</span>
-                <span>Rewards</span><span>{loadingInfo ? <InfoLoader/> : `${info?.rewards.toFixed(4)} ${STAKING_TICKER}`}</span>
-            </Stats>
+            <Box className='stake_emp_dex_btns stake_emp_dex_btns02'>
+                <span>Staked : </span>&nbsp;<span>{loadingInfo ? <InfoLoader/> : info ? `${getDisplayBalance(info!.staked)} ${STAKING_TICKER}` : ""}</span>&nbsp;&nbsp;
+                <span>Rewards : </span>&nbsp;<span>{loadingInfo ? <InfoLoader/> : `${info?.rewards.toFixed(4)} ${STAKING_TICKER}`}</span>
+            </Box>
 
         </Box>
         <Box className='contracts_box'>

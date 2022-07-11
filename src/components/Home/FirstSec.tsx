@@ -44,9 +44,9 @@ export default function FirstSec() {
                                         Paired against CRO; upCRO is the cornerstone vault of the Root Finance upToken ecosystem on Cronos.
                                     </Text>
                                     <Box className='launch_btns'>
-                                        <Button className='btn_box_shedow' as="a" href='#'>BUY NOW</Button>
-                                        <Button as="a" href='#' className='entr_a btn_box_shedow'>ENTER APP</Button>
-                                        <Button className='btn_box_shedow' as="a" href='#'>CHART</Button>
+                                        <Button className='btn_box_shedow' as="a" target='_blank' rel="noreferrer" href='https://cro.empiredex.org/#/swap?outputCurrency=0xb062084aFfDf75b9b494D56B8417F1B981Df790f'>BUY NOW</Button>
+                                        <Button as="a" href='/dashboard' className='entr_a btn_box_shedow'>ENTER APP</Button>
+                                        <Button className='btn_box_shedow' as="a" target='_blank' rel="noreferrer" href='https://www.dextools.io/app/cronos/pair-explorer/0xb0a7d88202eb8bf3c43d506b712b4e474eb9cda3'>CHART</Button>
                                     </Box>
                                 </Box>
                             </Box>

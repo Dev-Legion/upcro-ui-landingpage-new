@@ -63,7 +63,7 @@ export default function TeamSec() {
                         </SimpleGrid>
                     </Box>
                     <Box className='enter_app_btn_prnt'>
-                        <Button as="a" href="#" className='enter_app_btn btn_box_shedow'>ENTER APP</Button>
+                        <Button as="a" href="/dashboard" className='enter_app_btn btn_box_shedow'>ENTER APP</Button>
                     </Box>
                 </Box>
             </Container>

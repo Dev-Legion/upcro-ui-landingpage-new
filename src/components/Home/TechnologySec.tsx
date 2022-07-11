@@ -16,7 +16,7 @@ export default function TechnologySec() {
             <Image src="img/techno_img.png" alt='' className='techno_img' />
           </Box>
           <Box className='darkbg_btn_bx'>
-            <Button className='btn_box_shedow' as="a" href='#'>ENTER APP</Button>
+            <Button className='btn_box_shedow' as="a" href='/dashboard'>ENTER APP</Button>
           </Box>
         </Box>
       </Box>

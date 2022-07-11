@@ -70,7 +70,7 @@ export default function RoadmapSec() {
                     </Box>
                 </Box>
                 <Box className='enter_roadmap_btn_prnt'>
-                    <Button as="a" href='#' className='enter_roadmap_btn btn_box_shedow'>ENTER APP</Button>
+                    <Button as="a" href='/dashboard' className='enter_roadmap_btn btn_box_shedow'>ENTER APP</Button>
                 </Box>
             </Box>
         </Container>   
