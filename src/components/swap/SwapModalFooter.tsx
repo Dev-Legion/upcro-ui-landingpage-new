@@ -44,11 +44,12 @@ export default function SwapModalFooter({
     <>
       <AutoColumn gap="0px">
         <RowBetween align="center">
-          <Text fontWeight={400} fontSize={14} color={theme.text2}>
+          <Text fontWeight={400} fontSize={16} color={theme.text2} className="price_txt_nil">
             Price
           </Text>
           <Text
-            fontWeight={500}
+            className="txt_rgt_nill"
+            fontWeight={700}
             fontSize={14}
             color={theme.text1}
             style={{
@@ -68,13 +69,13 @@ export default function SwapModalFooter({
 
         <RowBetween>
           <RowFixed>
-            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2} className="price_txt_nil">
               {trade.tradeType === TradeType.EXACT_INPUT ? 'Minimum received' : 'Maximum sold'}
             </TYPE.black>
             <QuestionHelper text="Your transaction will revert if there is a large, unfavorable price movement before it is confirmed." />
           </RowFixed>
           <RowFixed>
-            <TYPE.black fontSize={14}>
+            <TYPE.black fontSize={14} fontWeight={700} className="txt_rgt_nill">
               {trade.tradeType === TradeType.EXACT_INPUT
                 ? slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4) ?? '-'
                 : slippageAdjustedAmounts[Field.INPUT]?.toSignificant(4) ?? '-'}
@@ -88,7 +89,7 @@ export default function SwapModalFooter({
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <TYPE.black color={theme.text2} fontSize={14} fontWeight={400}>
+            <TYPE.black color={theme.text2} fontSize={14} fontWeight={400} className="price_txt_nil">
               Price Impact
             </TYPE.black>
             <QuestionHelper text="The difference between the market price and your price due to trade size." />
@@ -97,24 +98,25 @@ export default function SwapModalFooter({
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
+            <TYPE.black fontSize={14} fontWeight={400} color={theme.text2} className="price_txt_nil">
               Liquidity Provider Fee
             </TYPE.black>
             <QuestionHelper text="A portion of each trade (0.30%) goes to liquidity providers as a protocol incentive." />
           </RowFixed>
-          <TYPE.black fontSize={14}>
+          <TYPE.black fontSize={14} fontWeight={700} >
             {realizedLPFee ? realizedLPFee?.toSignificant(6) + ' ' + trade.inputAmount.currency.symbol : '-'}
-          </TYPE.black>
+          </TYPE.black> 
         </RowBetween>
       </AutoColumn>
 
-      <AutoRow>
+      <AutoRow className='btn_cnfrm_swp_nil'>
         <ButtonError
           onClick={onConfirm}
           disabled={disabledConfirm}
           error={severity > 2}
           style={{ margin: '10px 0 0 0' }}
           id="confirm-swap-or-send"
+          className='manage_btn_nls'
         >
           <Text fontSize={20} fontWeight={500}>
             {severity > 2 ? 'Swap Anyway' : 'Confirm Swap'}

@@ -36,7 +36,7 @@ export default function SwapModalHeader({
   const theme = useContext(ThemeContext)
 
   return (
-    <AutoColumn gap={'md'} style={{ marginTop: '20px' }}>
+    <AutoColumn gap={'md'} className="cnfrm_swp_nls">
       <RowBetween align="flex-end">
         <RowFixed gap={'0px'}>
           <CurrencyLogo currency={trade.inputAmount.currency} size={'24px'} style={{ marginRight: '12px' }} />
@@ -49,7 +49,7 @@ export default function SwapModalHeader({
           </TruncatedText>
         </RowFixed>
         <RowFixed gap={'0px'}>
-          <Text fontSize={24} fontWeight={500} style={{ marginLeft: '10px' }} color={theme.text1}>
+          <Text fontSize={17} fontWeight={500} style={{ marginLeft: '10px' }} color={theme.text1} className="emire_txt_nll" >
             {trade.inputAmount.currency.symbol}
           </Text>
         </RowFixed>
@@ -75,7 +75,7 @@ export default function SwapModalHeader({
           </TruncatedText>
         </RowFixed>
         <RowFixed gap={'0px'}>
-          <Text fontSize={24} fontWeight={500} style={{ marginLeft: '10px' }} color={theme.text1}>
+          <Text fontSize={17} fontWeight={500} color={theme.text1} className="adafe_txt_nll" >
             {trade.outputAmount.currency.symbol}
           </Text>
         </RowFixed>
@@ -98,7 +98,7 @@ export default function SwapModalHeader({
       ) : null}
       <AutoColumn justify="flex-start" gap="sm" style={{ padding: '12px 0 0 0px' }}>
         {trade.tradeType === TradeType.EXACT_INPUT ? (
-          <TYPE.italic textAlign="left" style={{ width: '100%' }}>
+          <TYPE.italic textAlign="left" style={{ width: '100%' }} className="output_txt_nls">
             {`Output is estimated. You will receive at least `}
             <b>
               {slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} {trade.outputAmount.currency.symbol}

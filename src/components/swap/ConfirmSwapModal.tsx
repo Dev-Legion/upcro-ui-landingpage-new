@@ -86,12 +86,16 @@ export default function ConfirmSwapModal({
       swapErrorMessage ? (
         <TransactionErrorContent onDismiss={onDismiss} message={swapErrorMessage} />
       ) : (
-        <ConfirmationModalContent
-          title="Confirm Swap"
-          onDismiss={onDismiss}
-          topContent={modalHeader}
-          bottomContent={modalBottom}
-        />
+        <div className='select_tocn_modal'>
+          <ConfirmationModalContent
+            title="Confirm Swap"
+            onDismiss={onDismiss}
+            topContent={modalHeader}
+            bottomContent={modalBottom}
+          />
+        </div>
+
+       
       ),
     [onDismiss, modalBottom, modalHeader, swapErrorMessage]
   )
